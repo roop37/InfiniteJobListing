@@ -93,22 +93,28 @@ export default function Appli() {
 
   return (
     <>
-      <div className="flex mt-5 px-5 flex-wrap gap-2">
-        <input
-          type="text"
+      {/* <div className="flex mt-5 px-5 flex-wrap gap-2  lg:px-16">
+        <select
           name="minExperience"
-          placeholder="Min Exp"
           value={filters.minExperience}
           onChange={handleFilterChange}
-          className="placeholder-gray-400/70 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-black focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
-        />
+          className="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-black focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+        >
+          <option value="">Min Experience</option>
+          {[...Array(10)].map((_, index) => (
+            <option key={index + 1} value={index + 1}>
+              {index + 1}
+            </option>
+          ))}
+        </select>
+
         <input
           type="text"
           name="companyName"
-          placeholder="Company"
+          placeholder="Search Company Name"
           value={filters.companyName}
           onChange={handleFilterChange}
-          className="placeholder-gray-400/70 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-black focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+          className="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-black focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
         />
         <input
           type="text"
@@ -116,14 +122,14 @@ export default function Appli() {
           placeholder="Location"
           value={filters.location}
           onChange={handleFilterChange}
-          className="placeholder-gray-400/70 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-black focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+          className="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-black focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
         />
 
         <select
           name="role"
           value={filters.role}
           onChange={handleFilterChange}
-          className="placeholder-gray-400/70 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-black focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+          className="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-black focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
         >
           <option value="">Role</option>
           <option value="ios">iOS</option>
@@ -132,14 +138,92 @@ export default function Appli() {
           <option value="android">Android</option>
           <option value="techlead">Tech Lead</option>
         </select>
-        <input
-          type="text"
+
+        <select
           name="minBasePay"
-          placeholder="Min Base Pay"
           value={filters.minBasePay}
           onChange={handleFilterChange}
-          className="placeholder-gray-400/70 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-black focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+          className="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-black focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+        >
+          <option value="">Min Base Pay</option>
+          {[...Array(8)].map((_, index) => (
+            <option key={index} value={index * 10}>
+              {index * 10} USD
+            </option>
+          ))}
+        </select>
+
+        <label className="flex items-center gap-1">
+          <input
+            type="checkbox"
+            name="remote"
+            checked={filters.remote}
+            onChange={handleFilterChange}
+            className="mr-1"
+          />
+          Remote
+        </label>
+      </div> */}
+      <div className="flex mt-5 px-5 flex-wrap gap-2  lg:px-16">
+        <select
+          name="minExperience"
+          value={filters.minExperience}
+          onChange={handleFilterChange}
+          className="rounded-lg border border-gray-200 bg-white px-5 py-2.5 pr-8 text-black focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+        >
+          <option value="">Min Experience</option>
+          {[...Array(10)].map((_, index) => (
+            <option key={index + 1} value={index + 1}>
+              {index + 1}
+            </option>
+          ))}
+        </select>
+
+        <input
+          type="text"
+          name="companyName"
+          placeholder="Search Company Name"
+          value={filters.companyName}
+          onChange={handleFilterChange}
+          className="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-black focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
         />
+        <input
+          type="text"
+          name="location"
+          placeholder="Location"
+          value={filters.location}
+          onChange={handleFilterChange}
+          className="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-black focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+        />
+
+        <select
+          name="role"
+          value={filters.role}
+          onChange={handleFilterChange}
+          className="rounded-lg border border-gray-200 bg-white px-5 py-2.5 pr-8 text-black focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+        >
+          <option value="">Role</option>
+          <option value="ios">iOS</option>
+          <option value="frontend">Frontend</option>
+          <option value="backend">Backend</option>
+          <option value="android">Android</option>
+          <option value="techlead">Tech Lead</option>
+        </select>
+
+        <select
+          name="minBasePay"
+          value={filters.minBasePay}
+          onChange={handleFilterChange}
+          className="rounded-lg border border-gray-200 bg-white px-5 py-2.5 pr-8 text-black focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
+        >
+          <option value="">Min Base Pay</option>
+          {[...Array(8)].map((_, index) => (
+            <option key={index} value={index * 10}>
+              {index * 10} USD
+            </option>
+          ))}
+        </select>
+
         <label className="flex items-center gap-1">
           <input
             type="checkbox"
@@ -151,6 +235,7 @@ export default function Appli() {
           Remote
         </label>
       </div>
+
       <section className="bg-white pb-10 pt-10 dark:bg-dark lg:pb-20  lg:px-16">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center gap-10">

@@ -27,7 +27,7 @@ export default function JobCard({ job }) {
   return (
     <div className="bg-white shadow-lg px-4 pt-6 pb-8 mb-4 flex flex-col my-2 rounded-2xl max-w-72">
       <div>
-        <span className="inline-flex items-center gap-1 rounded-full shadow-lg bg-blue-50 px-2 py-1 text-xs font-semibold text-blue-600">
+        <span className="inline-flex items-center gap-1 rounded-full p-2 shadow-lg bg-blue-50  py-1 text-xs font-semibold text-blue-600">
           {" "}
           ⌛posted 10 days ago{" "}
         </span>
