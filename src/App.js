@@ -1,3 +1,5 @@
+// Redux has not been used as it was not nessesary
+
 import "./App.css";
 import Appli from "./Views/main";
 

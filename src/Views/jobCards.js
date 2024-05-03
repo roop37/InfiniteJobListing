@@ -1,6 +1,8 @@
 import React from "react";
 
+// Functional component for rendering individual job cards
 export default function JobCard({ job }) {
+  // Destructuring job object
   const {
     jdLink,
     jdUid,
@@ -24,6 +26,7 @@ export default function JobCard({ job }) {
     return text;
   };
 
+  //UI Starts here
   return (
     <div className="bg-white shadow-lg px-4 pt-6 pb-8 mb-4 flex flex-col my-2 rounded-2xl max-w-72">
       <div>
