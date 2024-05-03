@@ -8,7 +8,6 @@ export default function Appli() {
     minExperience: "",
     companyName: "",
     location: "",
-    techStack: "",
     role: "",
     minBasePay: "",
     remote: false,
@@ -74,15 +73,8 @@ export default function Appli() {
   };
 
   const filteredJobs = jobData.filter((job) => {
-    const {
-      minExperience,
-      companyName,
-      location,
-      remote,
-      techStack,
-      role,
-      minBasePay,
-    } = filters;
+    const { minExperience, companyName, location, remote, role, minBasePay } =
+      filters;
     return (
       (minExperience
         ? parseInt(job.minExp) <= parseInt(minExperience)
@@ -92,11 +84,6 @@ export default function Appli() {
         : true) &&
       (location
         ? job.location.toLowerCase().includes(location.toLowerCase())
-        : true) &&
-      (techStack
-        ? job.jobDetailsFromCompany
-            .toLowerCase()
-            .includes(techStack.toLowerCase())
         : true) &&
       (role ? job.jobRole.toLowerCase() === role.toLowerCase() : true) &&
       (minBasePay ? parseInt(job.minJdSalary) >= parseInt(minBasePay) : true) &&
@@ -131,14 +118,7 @@ export default function Appli() {
           onChange={handleFilterChange}
           className="placeholder-gray-400/70 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-black focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
         />
-        <input
-          type="text"
-          name="techStack"
-          placeholder="Tech Stack"
-          value={filters.techStack}
-          onChange={handleFilterChange}
-          className="placeholder-gray-400/70 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-black focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40"
-        />
+
         <select
           name="role"
           value={filters.role}
@@ -171,7 +151,7 @@ export default function Appli() {
           Remote
         </label>
       </div>
-      <section className="bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px] lg:px-16">
+      <section className="bg-white pb-10 pt-10 dark:bg-dark lg:pb-20  lg:px-16">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center gap-10">
             {filteredJobs.map((job) => (

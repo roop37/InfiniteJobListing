@@ -2,6 +2,7 @@ import React from "react";
 
 export default function JobCard({ job }) {
   const {
+    jdLink,
     jdUid,
     jobDetailsFromCompany,
     maxJdSalary,
@@ -28,7 +29,7 @@ export default function JobCard({ job }) {
       <div>
         <span className="inline-flex items-center gap-1 rounded-full shadow-lg bg-blue-50 px-2 py-1 text-xs font-semibold text-blue-600">
           {" "}
-          posted 10 days ago{" "}
+          ⌛posted 10 days ago{" "}
         </span>
       </div>
 
@@ -59,13 +60,14 @@ export default function JobCard({ job }) {
                   maxJdSalary || 0
                 } ${salaryCurrencyCode}`
               : "-"}{" "}
+            ✅{" "}
           </p>
           <p className="text-gray-900 text-[.9rem] font-semibold mt-3 subpixel-antialiased">
             About Company
           </p>
         </div>
       </div>
-      <div className="-mx-3 md:flex mb-2">
+      <div className="-mx-3 md:flex ">
         <div className="md:w-full px-3">
           <p className="text-black text-sm font-medium">About us:</p>
           <div className="text-fade">
@@ -77,12 +79,14 @@ export default function JobCard({ job }) {
       </div>
 
       <div className="flex justify-center">
-        <button
-          className="hover:text-blue-900 text-blue-700 text-sm relative bottom-3"
-          type="button"
-        >
-          View Job
-        </button>
+        <a href={jdLink} target="_blank" rel="noopener noreferrer">
+          <button
+            className="hover:text-blue-900 text-blue-700 text-sm relative bottom-3"
+            type="button"
+          >
+            View Job
+          </button>
+        </a>
       </div>
       <div className="flex flex-col  mb-2">
         <p className="text-gray-800 text-[.8rem] font-medium">
@@ -95,7 +99,7 @@ export default function JobCard({ job }) {
           className="bg-green-500 w-full hover:bg-green-700 text-white subpixel-antialiased py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           type="button"
         >
-          Easy Apply
+          ⚡Easy Apply
         </button>
         <button
           className="bg-blue-500 w-full hover:bg-blue-700 text-white subpixel-antialiased py-2 px-4 rounded focus:outline-none focus:shadow-outline"
