@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+```markdown
+# Candidate Application Platform Documentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The Candidate Application Platform is a web application designed to provide job seekers with a seamless experience for browsing and applying to job listings. It offers a user-friendly interface with features such as job filtering, infinite scroll, and responsive design.
 
-In the project directory, you can run:
+## How It Works
 
-### `npm start`
+The platform fetches job listings from an API endpoint and presents them to users in the form of cards. Users can interact with these cards to view detailed job information and apply to positions. The key functionalities of the platform include:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Job Listings**: Job listings are fetched from the API and displayed as cards on the UI. Each card contains essential information such as job title, company name, location, job description, experience required, and an apply button/link.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Filters**: Users can apply filters to refine their job search based on various criteria, including minimum experience, company name, location, remote/on-site, tech stack, role, and minimum base pay. The platform updates the displayed job listings in real-time as filters are applied.
 
-### `npm test`
+- **Infinite Scroll**: To enhance the browsing experience, the platform implements infinite scroll. As users scroll down the page, additional job listings are fetched and seamlessly integrated into the existing list, eliminating the need for manual pagination.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Responsive Design**: The platform is designed to be responsive and adaptable to different devices and screen sizes. Whether users access the platform from a desktop computer, tablet, or mobile phone, they can expect a consistent and user-friendly experience.
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run the Candidate Application Platform locally, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the GitHub repository:
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+git clone https://github.com/roop37/InfiniteJobListing.git
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Navigate to the project directory:
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cd candidate-application-platform
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Install dependencies:
+```
 
-## Learn More
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+````
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## How to Run
 
-### Code Splitting
+Once the installation is complete, you can run the application locally using the following command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+````
 
-### Analyzing the Bundle Size
+This command starts the development server and opens the application in your default web browser. You can now access the Candidate Application Platform and explore job listings.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Key Features
 
-### Making a Progressive Web App
+- **Job Cards**: Each job listing is displayed as a card containing essential information such as job title, company name, location, job description, experience required, and an apply button/link.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Filters**: Users can apply filters to refine job listings based on various criteria, including minimum experience, company name, location, remote/on-site, tech stack, role, and minimum base pay. The platform updates the displayed job listings dynamically as filters are applied or removed.
 
-### Advanced Configuration
+- **Infinite Scroll**: The platform seamlessly loads additional job listings as users scroll down the page, providing a continuous browsing experience without the need for manual pagination.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Responsive Design**: The platform is optimized for different devices and screen sizes, ensuring a consistent and user-friendly experience across all platforms.
 
-### Deployment
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
